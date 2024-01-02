@@ -1,0 +1,32 @@
+.yanzheng{
+    
+    position: relative; 
+    /* background-color: aqua; */
+}
+.yanzheng p{
+    position: absolute; 
+    top: 20px;
+    right: 69px;
+    font-style:italic;
+    display: inline-block;
+}
+.ssa{
+    position: absolute; 
+    top: 19px;
+    right: 112px;
+    display: inline-block;
+}
+.yanzheng input{
+    position: absolute; 
+    top: 21px;
+    left: 75px;
+    width: 40px;
+    font-size:17px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .2);
+}
+.msy{
+    position:absolute;
+    top: 20px;
+    right: 25px;
+}
