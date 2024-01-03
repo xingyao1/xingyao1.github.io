@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(247, 81, 181);
+}
+/* 清楚浮动 */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+/* 清楚浮动结束 */
+
+body {
+    height: 100%;
+    width: 100%;
+    background: url("../背景图片/img4.jpg") no-repeat center center;
+    /*加载背景图*/
+    /* 背景图不平铺 */
+    background-size: cover;
+    /* 让背景图基于容器大小伸缩 */
+    background-attachment: fixed;
+    /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+    /*此条属性必须设置否则可能无效*/
+    background-color: #CCCCCC;
+    /* 设置背景颜色，背景图加载过程中会显示背景色 */
+}
+/* 提交按钮 */
+
+.biaodan {
+    position: relative;
+    margin: 130px auto;
+    width: 280px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px 5px rgba(187, 184, 184, 0.737);
+    text-align: center;
+    transition: all .7s;
+}
+
+.biaodan:hover {
+    background-color: rgba(255, 255, 255, 0.777);
+    box-shadow: 0px 0px 1px 0px rgb(42, 41, 41);
+}
+
+
+/* 提交按钮结束 */
+
+input[type="submit"] {
+    display: block;
+    margin: 60px auto 0px auto;
+    display: block;
+    width: 80px;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: all 1s;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]::before {
+    width: 10px;
+    height: 10px;
+    background-color: blueviolet;
+}
+/* input */
+
+input {
+    margin-left: -30px;
+    border: 0;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+/* 用户名和密码图标 */
+/* .qq {
+    position: absolute;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    left: 52px;
+}
+
+.pp {
+    position: absolute;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    left: 52px;
+} */
+
+.pp,
+.qq {
+    position: absolute;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    left: 52px;
+}
+
+.qq::before {
+    content: '\e611';
+    font-family: 'iconfont';
+}
+
+.pp::before {
+    content: '\e659';
+    font-family: 'iconfont';
+}
+/* 用户名和密码图标结束 */

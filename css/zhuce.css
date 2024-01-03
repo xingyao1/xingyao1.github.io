@@ -1,0 +1,31 @@
+.biaodant{
+    display: none;
+    position: relative;
+    margin: 130px auto;
+    width: 280px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 15px;
+    text-align: center;
+    transition: all .7s;
+    box-shadow: 1px 1px 1px black;
+    /* box-shadow: 0px 0px 4px 1px rgb(42, 41, 41); */
+    box-shadow: 0px 0px 30px 5px rgba(187, 184, 184, 0.737);
+}
+.biaodant h2{
+    position: absolute; 
+    top: 45px;
+    left: 104px;
+}
+.zhuce1{
+    position: absolute; right: 15px;top: 206px;
+}
+
+.biaodant:hover {
+    background-color: rgba(255, 255, 255, 0.777);
+    box-shadow: 0px 0px 1px 0px rgb(42, 41, 41);
+    /* background-color: rgba(0, 0, 0, .0); */
+}
+.xianshi2{
+    margin-top: 4px;margin-left: 0px; font-size: 10px;color: red;
+}

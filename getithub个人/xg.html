@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="网页头图片.ico" type="image/x-icon/">
+    <title>登录湖</title>
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/denglu.css">
+    <link rel="stylesheet" href="../css/zhuce.css">
+    <link rel="stylesheet" href="../css/共样式.css">
+    <link rel="stylesheet" href="../css/验证码.css">
+
+
+</head>
+<!-- js回车登录功能   使用方法 注意if里面的var创建的绑定事件是一个id值为btn_login 将这个id套在要回车执行的标签上就行 如<a id="btn_login"></a> -->
+<!-- 还有就是body这个标签里需要加上 onkeydown="keyDown"-->
+<script type="text/javascript">
+    function KeyDown() {
+        if (event.keyCode == 13) {
+            var btn_login = document.getElementById("btn_login"); //id为登录按钮id
+            btn_login.focus();
+            btn_login.click();
+        }
+    }
+</script>
+<!-- js回车登录结束 -->
+
+<body onkeydown="KeyDown();">
+    <div class="biaodan">
+        <!-- <button style="position: absolute;top: -25px;left: 10px;border: 0px; background-color: rgba(0,0 ,0 ,0 );" id="zhanshi">展示</button> -->
+        <h2>修改湖</h2>
+        <form action="" class="biaodan1">
+            <div class="zhanghao">
+                <div class="qq"></div>
+                <input type="text " placeholder="新账户" id="zhanghao" value="">
+            </div>
+            <!-- -------------------------------------------------------------------------- -->
+            <div class="mima">
+                <div class="pp"></div>
+                <input type="password" placeholder="新密码" id="mima" value="">
+            </div>
+            <a href="dist/index.html" class="zhuce">返回</a>
+            <a href="#" class="denglu" id="btn_login">修改</a>
+            <!----这里使用了回车登录 btn_login  -->
+            <div class="xianshi" id="oo"></div>
+        </form>
+        <script>
+            let zhuce = document.querySelector('.zhuce');
+            let zhanghao = document.getElementById("zhanghao");
+            let mima = document.getElementById("mima");
+            let btn_login = document.getElementById("btn_login");
+            let oo = document.getElementById("oo");
+            btn_login.addEventListener('click', function () {
+                if (zhanghao.value == "" || mima.value == "") {
+                    oo.innerHTML = "请输入账户和密码";
+                } else {
+                    zhuce.style.display = "none";
+                    btn_login.style.display = "none";
+                    localStorage.setItem("yonhuming", zhanghao.value);
+                    localStorage.setItem("mima", mima.value);
+                    let max = 3;
+                    oo.innerHTML = '修改成功'+max--+'秒后跳转到登录页面';
+                    oo.style.color = "green";
+                    setInterval(function () {
+                        oo.innerHTML = '修改成功' + max + '秒后跳转到登录页面';
+                        if (max == 0) {
+                            window.location.href = "../index.html";
+                        }
+                        max--
+                    }, 1000);
+                }
+            })
+        </script>
+    </div>
+</body>
+
+
+</html>

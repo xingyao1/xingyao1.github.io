@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="网页头图片.ico" type="image/x-icon/">
+    <title>登录湖</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/denglu.css">
+    <link rel="stylesheet" href="css/zhuce.css">
+    <link rel="stylesheet" href="css/共样式.css">
+    <link rel="stylesheet" href="css/验证码.css">
+   
+    
+</head>
+<!-- js回车登录功能   使用方法 注意if里面的var创建的绑定事件是一个id值为btn_login 将这个id套在要回车执行的标签上就行 如<a id="btn_login"></a> -->
+<!-- 还有就是body这个标签里需要加上 onkeydown="keyDown"-->
+<script type="text/javascript">
+    function KeyDown() {
+        if (event.keyCode == 13) {
+            var btn_login = document.getElementById("btn_login"); //id为登录按钮id
+            btn_login.focus();
+            btn_login.click();
+        }
+    }
+</script>
+<!-- js回车登录结束 -->
+
+<body onkeydown="KeyDown();">
+    <div class="biaodan">
+        <!-- <button style="position: absolute;top: -25px;left: 10px;border: 0px; background-color: rgba(0,0 ,0 ,0 );" id="zhanshi">展示</button> -->
+        <h2>登录湖</h2>
+        <form action="" class="biaodan1">
+            <div class="zhanghao">
+                <div class="qq"></div>
+                <input type="text " value="" placeholder="账户 "id="zhanghao">
+            </div>
+            <!-- -------------------------------------------------------------------------- -->
+            <div class="mima">
+                <div class="pp"></div>
+                <input type="password" placeholder="密码 " id="mima" value="">
+            </div>
+            <a href="#" class="denglu" id="btn_login">登录</a>
+            <!----这里使用了回车登录 btn_login  -->
+            <a  class="zhuce">注册</a>
+            <a href="getithub个人/yz.html" class="xg">改密</a>
+            <div class="xianshi" id="oo"></div>
+        </form>
+    </div>
+    <div class="biaodant">
+        <!-- <button style="position: absolute;top: -25px;left: 10px;border: 0px; background-color: rgba(0,0 ,0 ,0 );" id="zhanshi">展示</button> -->
+        <h2>注册湖</h2>
+        <form action="" class="biaodan1">
+            <div class="zhanghao">
+                <div class="qq"></div>
+                <input type="text " placeholder="账户 " id="zhanghao2" value="">
+            </div>
+            <!-- -------------------------------------------------------------------------- -->
+            <div class="mima">
+                <div class="pp"></div>
+                <input type="password" placeholder="密码 " id="mima2" value="">
+            </div>
+            <a href="#" class="denglu" id="btn_login">注册</a>
+            <!----这里使用了回车登录 btn_login  -->
+            <a href="#" class="zhuce">登录</a>
+            <div class="xianshi2"></div>
+            <div class="yanzheng">
+                <p></p>
+                <a href="#" class="ssa">获取验证码</a>
+                <input type="text">
+                <!-- <a href="#" class="msy">验证</a> -->
+            </div>
+            <div style="display: none;margin-top: 15px;color: rgb(5, 203, 5);">验证成功</div>
+        </form>
+    </div>
+    <script src="js/登录页面切换.js"></script>
+    <script src="js/注册登录功能.js"></script> 
+    <script src="js/验证码.js"></script> 
+</body>
+
+
+</html>
